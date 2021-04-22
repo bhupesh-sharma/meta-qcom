@@ -11,7 +11,7 @@ inherit kernel
 LOCALVERSION ?= "+linaro"
 SCMVERSION ?= "y"
 
-LINUX_LINARO_QCOM_GIT ?= "git://git.linaro.org/landing-teams/working/qualcomm/kernel.git;protocol=https"
+LINUX_LINARO_QCOM_GIT ?= "git://git.linaro.org/people/bhupesh.sharma/kernel.git/;protocol=https"
 SRC_URI = "${LINUX_LINARO_QCOM_GIT};branch=${SRCBRANCH}"
 
 S = "${WORKDIR}/git"
@@ -19,7 +19,7 @@ S = "${WORKDIR}/git"
 KERNEL_DEFCONFIG_aarch64 ?= "${S}/arch/arm64/configs/defconfig"
 KERNEL_DEFCONFIG_apq8064 ?= "${S}/arch/arm/configs/qcom_defconfig"
 KERNEL_DEFCONFIG_sdx55 ?= "${S}/arch/arm/configs/qcom_defconfig"
-KERNEL_CONFIG_FRAGMENTS += "${S}/kernel/configs/distro.config"
+#KERNEL_CONFIG_FRAGMENTS += "${S}/kernel/configs/distro.config"
 
 kernel_conf_variable() {
 	CONF_SED_SCRIPT="$CONF_SED_SCRIPT /CONFIG_$1[ =]/d;"
