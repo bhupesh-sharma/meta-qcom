@@ -3,6 +3,7 @@ require recipes-test/images/initramfs-tiny-image.bb
 DESCRIPTION = "Small ramdisk image for running tests (bootrr, etc)"
 
 PACKAGE_INSTALL += " \
+    cmake \
     bluez5 \
     dhcp-client \
     diag \
@@ -13,11 +14,13 @@ PACKAGE_INSTALL += " \
     e2fsprogs-resize2fs \
     e2fsprogs-tune2fs \
     ethtool \
+    git \
     gptfdisk \
     iw \
     lava-test-shell \
     libdrm-tests \
     lrzsz \
+    make \
     pciutils \
     pd-mapper \
     qrtr \
