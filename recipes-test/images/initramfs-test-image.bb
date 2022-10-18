@@ -17,6 +17,7 @@ PACKAGE_INSTALL += " \
     iw \
     lava-test-shell \
     libdrm-tests \
+    libaio \
     lrzsz \
     pciutils \
     pd-mapper \
@@ -32,6 +33,8 @@ PACKAGE_INSTALL += " \
 # on. This can be handled by .bbappends, but then image recipes including this
 # one would not get all these tools. So simulate dynamic bbappend here.
 PACKAGE_INSTALL_openembedded_layer += " \
+    android-tools \
+    android-tools-conf \
     cryptsetup \
     devmem2 \
 "
